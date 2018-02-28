@@ -2,5 +2,5 @@ var module = angular.module("moreDirectivesApp", []);
 module.controller("moreDirectivesCtrlr", ctlr);
 
 function ctlr() {
-    this.myList = [1, 2, 3, 4, 5, 6];
+    this.myList = [{'name': 'Jaini', 'age': 25}, {'name': 'Foo', 'age': 15}, {'name': 'Bar', 'age': 35}];
 }

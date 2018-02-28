@@ -10,7 +10,10 @@
     <input type="checkbox" ng-model="ctrlr.isChecked"></input>
     <p ng-show="ctrlr.isChecked">Some content</p>
 
-    <p ng-repeat="i in ctrlr.myList">Hello {{i}}</p>
+    <div ng-repeat="obj in ctrlr.myList">
+        <p>Hello {{obj.name}}. You are {{obj.age}} years old.</p>
+        <hr/>
+    </div>
 
 </div>
 </body>
