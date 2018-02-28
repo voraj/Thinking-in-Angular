@@ -11,6 +11,7 @@
     <p ng-show="ctrlr.isChecked">Some content</p>
 
     <div ng-repeat="obj in ctrlr.myList">
+        <p>Element {{$index+1}}</p>
         <p>Hello {{obj.name}}. You are {{obj.age}} years old.</p>
         <hr/>
     </div>
