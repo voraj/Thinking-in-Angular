@@ -3,11 +3,13 @@
     <title>Modules</title>
     <script src="angular.js"></script>
     <script src="app.js"></script>
+    <script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
+    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css"/>
     <script src="modules.js"></script>
 </head>
 <body>
-<div ng-controller="HelloController as ctrl">
-    <span>{{ctrl.helloMessage}}</span>
+<div ng-controller="MainCtrl as ctrl">
+    <tags-input ng-model="ctrl.tags"></tags-input>
 </div>
 
 </body>
