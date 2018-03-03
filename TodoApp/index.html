@@ -11,10 +11,16 @@
     <button ng-click="ctrl.addTodo()">Add</button>
 
     <p>Your Todos:</p>
-    <button ng-click="">Edit</button>
-
-    <div ng-repeat="i in ctrl.todolist">
-        <p>{{$index+1}}. {{i}}</p>
+    <button ng-click="ctrl.triggerEditMode()" ng-hide="ctrl.editMode">Edit</button>
+    <button ng-click="ctrl.triggerEditMode()" ng-show="ctrl.editMode">Done</button>
+    <div>
+        <ol>
+            <li ng-repeat="i in ctrl.todolist track by $index">
+                <span ng-hide="ctrl.editMode">{{i}}</span>
+                <input type="text" ng-show="ctrl.editMode" ng-model="i"></input>
+                <button ng-click="ctrl.deleteTodo($index)()">Delete</button>
+            </li>
+        </ol>
     </div>
 </div>
 </body>
